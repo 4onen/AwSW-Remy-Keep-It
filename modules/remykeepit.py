@@ -136,6 +136,8 @@ def link_images_from_node(start_node,max_depth=10000):
         if depth > max_depth:
             print "Max depth reached, dropping node from", node.filename, node.linenumber
             continue
+        if isinstance(node, renpy.ast.Label) and node.name in [u'chapter1chars',u'chapter2chars',u'chapter3chars',u'chapter4chars',u'_call_syscheck_105',u'_call_syscheck_106']:
+            continue # Don't recurse into chapter select menu
         if node.next:
             node_queue.append((node.next, depth + 1))
         # When we show Remy, show the remykeepit expression
