@@ -171,12 +171,7 @@ def link_images(ml):
     # - The true ending
     lipstick_choice_menu = ( ml.find_label('remy4')
         .search_menu()
-        .add_choice(
-            "Keep it.",
-            jump='remykeepit_4onen_enabled',
-        )
         .search_say()
-        .link_behind_from('remykeepit_4onen_enabled_end')
     )
 
     link_images_from_node(lipstick_choice_menu.node)
