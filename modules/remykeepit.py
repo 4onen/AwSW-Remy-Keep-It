@@ -111,7 +111,7 @@ def define_wrapper_images():
             # (u'remy',)+attributes,
             ConditionalDisplayable(
                 "remykeepit_4onen_enabled", image_bases[1],
-                None, image_bases[1],
+                None, image_bases[0],
             ),
         )
         renpy.exports.image(
@@ -119,7 +119,7 @@ def define_wrapper_images():
             # (u'remy',)+attributes+(u'flip',),
             ConditionalDisplayable(
                 "remykeepit_4onen_enabled", im.Flip(image_bases[1],horizontal=True),
-                None, im.Flip(image_bases[1],horizontal=True),
+                None, im.Flip(image_bases[0],horizontal=True),
             ),
         )
 
