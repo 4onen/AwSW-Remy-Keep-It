@@ -1,3 +1,6 @@
+init:
+    image remyrom remykeepitc = renpy.display.im.Composite((2500,1406),(0,0),"cg/chap4/remyrom.png", (0,0), "remykeepit_4onen/remyrom_lipstick.png")
+
 init python:
     remykeepit_4onen_enabled = False
 
@@ -26,7 +29,9 @@ label remykeepit_4onen_enabled:
 
     jump remykeepit_4onen_enabled_end
 
-# label remykeepit_4onen_c4_kiss: #TODO
+label remykeepit_4onen_c4_kiss:
+    show remyrom remykeepitc at Pan((580, 326), (350, 0), 8.0) with fade
+    jump remykeepit_4onen_c4_kiss_end
 
 label remykeepit_4onen_c5_ready:
     c "Lipstick again?"
